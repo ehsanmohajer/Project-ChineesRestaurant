@@ -38,10 +38,10 @@ This project is built with:
 
 ```sh
 # Clone the repository
-git clone https://github.com/ehsanmohajer/local-eats-hub.git
+git clone https://github.com/ehsanmohajer/Project-restaurantchinees.git
 
 # Navigate to the project directory
-cd local-eats-hub
+cd Project-restaurantchinees
 
 # Install dependencies
 npm install
