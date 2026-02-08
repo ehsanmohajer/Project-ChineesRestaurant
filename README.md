@@ -1,73 +1,115 @@
-# Welcome to your Lovable project
+# Local Eats Hub - Restaurant Website
 
-## Project info
+A modern, full-featured restaurant website with online ordering, reservations, and customer engagement features.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Features
 
-## How can I edit this code?
+- 🛒 **Shopping Cart & Checkout** - Complete ordering system with cart management
+- 📅 **Table Reservations** - Easy booking system with date and time selection
+- 🤖 **AI ChatBot** - Intelligent customer support assistant
+- ⭐ **Customer Reviews** - Display testimonials and ratings
+- 🌙 **Dark/Light Theme** - User-preferred theme with persistence
+- 📱 **Responsive Design** - Mobile-first, works on all devices
+- 🍕 **Menu Management** - Dynamic menu with categories and daily deals
+- 👨‍💼 **Admin Dashboard** - Manage orders, menu items, reviews, and settings
+- 🔐 **Authentication** - Secure admin login with Supabase
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
+## Technologies
 
 This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **Vite** - Fast build tool and dev server
+- **React 18** - UI library with hooks
+- **TypeScript** - Type-safe JavaScript
+- **Tailwind CSS** - Utility-first CSS framework
+- **shadcn/ui** - Beautiful, accessible UI components
+- **Supabase** - Backend as a service (PostgreSQL database, authentication)
+- **React Router** - Client-side routing
+- **Sonner** - Toast notifications
 
-## How can I deploy this project?
+## Getting Started
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+### Prerequisites
 
-## Can I connect a custom domain to my Lovable project?
+- Node.js 18+ and npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Supabase account for backend services
 
-Yes, you can!
+### Installation
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+```sh
+# Clone the repository
+git clone https://github.com/ehsanmohajer/local-eats-hub.git
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+# Navigate to the project directory
+cd local-eats-hub
+
+# Install dependencies
+npm install
+
+# Set up environment variables
+cp .env.example .env
+# Edit .env and add your Supabase credentials
+
+# Start the development server
+npm run dev
+```
+
+The application will be available at `http://localhost:8080`
+
+## Environment Variables
+
+Create a `.env` file in the root directory with:
+
+```
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+## Project Structure
+
+```
+src/
+├── components/        # Reusable UI components
+│   ├── admin/        # Admin dashboard components
+│   ├── home/         # Homepage sections
+│   ├── layout/       # Header, Footer
+│   ├── shared/       # Shared components (ChatBot, Modals)
+│   └── ui/           # shadcn/ui components
+├── contexts/         # React Context providers
+├── hooks/            # Custom React hooks
+├── integrations/     # Third-party integrations (Supabase)
+├── pages/            # Page components
+├── types/            # TypeScript type definitions
+└── lib/              # Utility functions
+```
+
+## Deployment
+
+This project can be deployed to various platforms:
+
+### Vercel (Recommended)
+
+```sh
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy
+vercel
+```
+
+### Netlify
+
+```sh
+# Build the project
+npm run build
+
+# Deploy the dist/ folder to Netlify
+```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+MIT License - feel free to use this project for your own restaurant website.
