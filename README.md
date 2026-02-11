@@ -1,4 +1,4 @@
-# Local Eats Hub - Restaurant Website
+# Local Eats Hub - Project-ChineesRestaurant Website
 
 A modern, full-featured restaurant website with online ordering, reservations, and customer engagement features.
 
